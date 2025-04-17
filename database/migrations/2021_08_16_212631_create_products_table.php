@@ -36,10 +36,10 @@ class CreateProductsTable extends Migration
             $table->string('en_name');
             $table->text('ar_description');
             $table->text('en_description');
-            $table->double('purchese_price' , 8 , 2);
-            $table->double('sale_price' , 8 , 2);
-            $table->double('stock' , 8 , 2);
-            $table->text('image')->default('default.png');
+            $table->double('purchese_price', 8, 2);
+            $table->double('sale_price', 8, 2);
+            $table->double('stock', 8, 2);
+            $table->string('image')->default('default.png');
             $table->timestamps();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
